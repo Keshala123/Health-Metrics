@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional BMI Calculator | Health & Wellness</title>
+    <meta name="description" content="Calculate your Body Mass Index (BMI) with our professional BMI calculator. Get instant results and health recommendations.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="myVideo">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <header class="main-header">
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <span>HealthMetrics</span>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="active">BMI Calculator</a>
+            <a href="health-tips.html">Health Tips</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="calculator">
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="calculator-header">
+                    <h1>BMI Calculator</h1>
+                    <p class="subtitle">Calculate your Body Mass Index for better health insights</p>
+                </div>
+                
+                <div class="input-section">
+                    <div class="input-group">
+                        <label for="height">
+                            <i class="fas fa-ruler-vertical"></i>
+                            Height (cm)
+                        </label>
+                        <div class="input-wrapper">
+                            <input type="range" id="height-slider" min="100" max="250" value="170">
+                            <input type="number" id="height" placeholder="Enter your height">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="weight">
+                            <i class="fas fa-weight"></i>
+                            Weight (kg)
+                        </label>
+                        <div class="input-wrapper">
+                            <input type="range" id="weight-slider" min="30" max="200" value="70">
+                            <input type="number" id="weight" placeholder="Enter your weight">
+                        </div>
+                    </div>
+                </div>
+
+                <button id="calculate" class="primary-button">
+                    <span>Calculate BMI</span>
+                    <i class="fas fa-calculator"></i>
+                </button>
+
+                <div class="result">
+                    <div class="bmi-value">
+                        <span>Your BMI</span>
+                        <div class="bmi-display">
+                            <h2 id="bmi">--</h2>
+                            <div class="bmi-gauge">
+                                <div class="gauge-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bmi-category">
+                        <span id="category">--</span>
+                        <div class="category-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bmi-info">
+                    <div class="info-item" data-category="underweight">
+                        <div class="info-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <span class="range">Underweight</span>
+                        <span class="value">&lt; 18.5</span>
+                    </div>
+                    <div class="info-item" data-category="normal">
+                        <div class="info-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="range">Normal</span>
+                        <span class="value">18.5 - 24.9</span>
+                    </div>
+                    <div class="info-item" data-category="overweight">
+                        <div class="info-icon">
+                            <i class="fas fa-exclamation"></i>
+                        </div>
+                        <span class="range">Overweight</span>
+                        <span class="value">25 - 29.9</span>
+                    </div>
+                    <div class="info-item" data-category="obese">
+                        <div class="info-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <span class="range">Obese</span>
+                        <span class="value">&gt; 30</span>
+                    </div>
+                </div>
+
+                <div class="health-tips">
+                    <h3><i class="fas fa-lightbulb"></i> Health Tips</h3>
+                    <div class="tips-container">
+                        <div class="tip active">
+                            <i class="fas fa-dumbbell"></i>
+                            <p>Regular exercise helps maintain a healthy weight</p>
+                        </div>
+                        <div class="tip">
+                            <i class="fas fa-apple-alt"></i>
+                            <p>Eat a balanced diet with plenty of fruits and vegetables</p>
+                        </div>
+                        <div class="tip">
+                            <i class="fas fa-glass-water"></i>
+                            <p>Stay hydrated by drinking enough water daily</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 HealthMetrics. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
